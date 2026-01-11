@@ -1,0 +1,24 @@
+meta {
+  name: Delete todo
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:3000/todos/1
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+vars:pre-request {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

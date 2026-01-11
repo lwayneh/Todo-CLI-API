@@ -1,0 +1,24 @@
+meta {
+  name: Add todo
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3000/todos
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {"name":"New Todo added by Bruno request!"}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
